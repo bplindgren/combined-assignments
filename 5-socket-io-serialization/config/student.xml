@@ -1,1 +1,5 @@
-<student/>
+<student firstName="Billy" lastName="Bob">
+	<favorite-ide>Sublime Text 2</favorite-ide>
+	<favorite-language>Java, of course</favorite-language>
+	<favorite-paradigm>Object-Oriented</favorite-paradigm>
+</student>

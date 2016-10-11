@@ -35,18 +35,24 @@ public class MegaCorp implements Hierarchy<Capitalist, FatCat> {
     @Override
     public boolean add(Capitalist capitalist) {
         boolean result = true;
+        // if the hierarchy does not have the capitalist
         if (capitalist != null && !this.has(capitalist)) {
+        	// Add it if it's a fatcat
             if (capitalist instanceof FatCat) {
                 FatCat cat = (FatCat) capitalist;
                 this.hierarchy.put(cat, new HashSet<>());
             }
 
+            // If the capitalist has a parent
             if (capitalist.hasParent()) {
                 FatCat parent = capitalist.getParent();
+                // Add it
                 this.add(parent);
+                // Add the capitalist to the parent's set
                 this.hierarchy.get(parent).add(capitalist);
             }
 
+            // return if the capitalist was added
             return this.has(capitalist);
         }
         return false;
