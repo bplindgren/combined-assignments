@@ -4,8 +4,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 import java.net.ServerSocket;
 import java.net.Socket;
 
@@ -14,10 +12,9 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-//import com.cooksys.serialization.assignment.model.Contact;
-//import com.cooksys.serialization.assignment.model.Session;
-import com.cooksys.socket.assignment.model.Config;
-import com.cooksys.socket.assignment.model.Student;
+import com.cooksys.ftd.assignments.socket.Utils;
+import com.cooksys.ftd.assignments.socket.model.Config;
+import com.cooksys.ftd.assignments.socket.model.Student;
 
 public class Server extends Utils {
 

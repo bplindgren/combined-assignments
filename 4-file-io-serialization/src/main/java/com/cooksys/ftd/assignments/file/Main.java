@@ -1,14 +1,5 @@
 package com.cooksys.ftd.assignments.file;
 
-<<<<<<< HEAD:4-file-io-serialization/src/main/java/com/cooksys/serialization/assignment/Main.java
-=======
-import com.cooksys.ftd.assignments.file.model.Contact;
-import com.cooksys.ftd.assignments.file.model.Instructor;
-import com.cooksys.ftd.assignments.file.model.Session;
-import com.cooksys.ftd.assignments.file.model.Student;
-
-import javax.xml.bind.JAXBContext;
->>>>>>> upstream/master:4-file-io-serialization/src/main/java/com/cooksys/ftd/assignments/file/Main.java
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,10 +9,10 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
-import com.cooksys.serialization.assignment.model.Contact;
-import com.cooksys.serialization.assignment.model.Instructor;
-import com.cooksys.serialization.assignment.model.Session;
-import com.cooksys.serialization.assignment.model.Student;
+import com.cooksys.ftd.assignments.file.model.Contact;
+import com.cooksys.ftd.assignments.file.model.Instructor;
+import com.cooksys.ftd.assignments.file.model.Session;
+import com.cooksys.ftd.assignments.file.model.Student;
 
 public class Main {
 

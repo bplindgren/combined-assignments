@@ -10,8 +10,9 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import com.cooksys.socket.assignment.model.Config;
-import com.cooksys.socket.assignment.model.Student;
+import com.cooksys.ftd.assignments.socket.Utils;
+import com.cooksys.ftd.assignments.socket.model.Config;
+import com.cooksys.ftd.assignments.socket.model.Student;
 
 /**
  * The client should load a {@link com.cooksys.ftd.assignments.socket.model.Config} object from the

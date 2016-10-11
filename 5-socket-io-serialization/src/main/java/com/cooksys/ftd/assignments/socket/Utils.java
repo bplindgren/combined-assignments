@@ -1,19 +1,14 @@
 package com.cooksys.ftd.assignments.socket;
 
-<<<<<<< HEAD:5-socket-io-serialization/src/main/java/com/cooksys/socket/assignment/Utils.java
+
 import java.io.File;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import com.cooksys.socket.assignment.model.Config;
-import com.cooksys.socket.assignment.model.Student;
-=======
 import com.cooksys.ftd.assignments.socket.model.Config;
-
-import javax.xml.bind.JAXBContext;
->>>>>>> upstream/master:5-socket-io-serialization/src/main/java/com/cooksys/ftd/assignments/socket/Utils.java
+import com.cooksys.ftd.assignments.socket.model.Student;
 
 /**
  * Shared static methods to be used by both the {@link Client} and {@link Server} classes.

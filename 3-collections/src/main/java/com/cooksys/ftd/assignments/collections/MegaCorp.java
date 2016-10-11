@@ -1,14 +1,20 @@
 package com.cooksys.ftd.assignments.collections;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 import com.cooksys.ftd.assignments.collections.hierarchy.Hierarchy;
 import com.cooksys.ftd.assignments.collections.model.Capitalist;
 import com.cooksys.ftd.assignments.collections.model.FatCat;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.*;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class MegaCorp implements Hierarchy<Capitalist, FatCat> {
 
+	Map<Capitalist, Set<Capitalist>> company = new HashMap<Capitalist, Set<Capitalist>>();
     /**
      * Adds a given element to the hierarchy.
      * <p>
@@ -29,14 +35,13 @@ public class MegaCorp implements Hierarchy<Capitalist, FatCat> {
      */
     @Override
     public boolean add(Capitalist capitalist) {
-<<<<<<< HEAD:3-collections/src/main/java/com/cooksys/ftd/assignments/day/three/collections/MegaCorp.java
         boolean result = true;
         // if the hierarchy does not have the capitalist
         if (capitalist != null && !this.has(capitalist)) {
         	// Add it if it's a fatcat
             if (capitalist instanceof FatCat) {
                 FatCat cat = (FatCat) capitalist;
-                this.hierarchy.put(cat, new HashSet<>());
+                company.put(cat, new HashSet<>());
             }
 
             // If the capitalist has a parent
@@ -45,16 +50,13 @@ public class MegaCorp implements Hierarchy<Capitalist, FatCat> {
                 // Add it
                 this.add(parent);
                 // Add the capitalist to the parent's set
-                this.hierarchy.get(parent).add(capitalist);
+                company.get(parent).add(capitalist);
             }
 
             // return if the capitalist was added
             return this.has(capitalist);
         }
         return false;
-=======
-        throw new NotImplementedException();
->>>>>>> upstream/master:3-collections/src/main/java/com/cooksys/ftd/assignments/collections/MegaCorp.java
     }
 
     /**
