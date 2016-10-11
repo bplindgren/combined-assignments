@@ -1,6 +1,8 @@
 package com.cooksys.ftd.assignments.concurrency;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import java.io.File;
+
+import com.cooksys.ftd.assignments.concurrency.model.config.Config;
 
 public class Main {
 
@@ -12,9 +14,10 @@ public class Main {
      * is not disabled, create a {@link Server} object with the server config and spin off a thread to run it.
      *
      * If the embedded {@link com.cooksys.ftd.assignments.concurrency.model.config.ClientConfig} object
-     * is not disabled, create a {@link Client} object with the client config ans spin off a thread to run it.
+     * is not disabled, create a {@link Client} object with the client config and spin off a thread to run it.
      */
     public static void main(String[] args) {
-       throw new NotImplementedException();
+    	File configFile = new File(".\\config\\config.xml");
+    	Config config = new Config(Config.load(configFile));
     }
 }
