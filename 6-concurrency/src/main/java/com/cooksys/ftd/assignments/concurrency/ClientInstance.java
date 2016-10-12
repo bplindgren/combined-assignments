@@ -1,16 +1,22 @@
 package com.cooksys.ftd.assignments.concurrency;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import com.cooksys.ftd.assignments.concurrency.model.config.ClientInstanceConfig;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import com.cooksys.ftd.assignments.concurrency.model.message.Request;
 
 public class ClientInstance implements Runnable {
 
-    public ClientInstance(ClientInstanceConfig config) {
-        throw new NotImplementedException();
+    private ClientInstanceConfig config;
+
+	public ClientInstance(ClientInstanceConfig config) {
+        this.config = config;
     }
 
     @Override
     public void run() {
-        throw new NotImplementedException();
+    	List<Request> requests = new ArrayList<Request>();
+        requests = config.getRequests();
     }
 }

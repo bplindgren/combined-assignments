@@ -5,8 +5,10 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class Server implements Runnable {
 
+	private ServerConfig config;
+	
     public Server(ServerConfig config) {
-        throw new NotImplementedException();
+        this.config = config;
     }
 
     @Override
