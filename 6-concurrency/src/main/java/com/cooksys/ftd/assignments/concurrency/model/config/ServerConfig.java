@@ -17,6 +17,7 @@ public class ServerConfig {
     /**
      * The port this server should listen on. Defaults to {@code 8080}.
      */
+    @XmlElement
     private int port = 8080;
 
     /**

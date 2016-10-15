@@ -15,6 +15,7 @@ public class ClientConfig {
     /**
      * The port this client should connect on. Defaults to {@code 8080}.
      */
+    @XmlElement
     private int port = 8080;
 
     /**
