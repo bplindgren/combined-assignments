@@ -1,13 +1,14 @@
 package com.cooksys.ftd.assignments.concurrency.model.config;
 
-import com.cooksys.ftd.assignments.concurrency.model.message.Request;
-import com.cooksys.ftd.assignments.concurrency.model.message.RequestType;
+import java.net.Socket;
+import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import java.util.List;
+
+import com.cooksys.ftd.assignments.concurrency.model.message.Request;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ClientInstanceConfig {
@@ -19,8 +20,12 @@ public class ClientInstanceConfig {
      */
     @XmlAttribute
     private int delay = -1;
+    
+    private Socket socket;
+    
+    private String host = "localhost";
 
-    /**
+	/**
      * The requests to send, in order, represented as {@link Request} values.
      */
     @XmlElement(name = "request")
@@ -33,8 +38,24 @@ public class ClientInstanceConfig {
     public void setDelay(int delay) {
         this.delay = delay;
     }
+    
+    public Socket getSocket() {
+		return socket;
+	}
 
-    public List<Request> getRequests() {
+	public void setSocket(Socket socket) {
+		this.socket = socket;
+	}
+
+    public String getHost() {
+		return host;
+	}
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+	public List<Request> getRequests() {
         return requests;
     }
 

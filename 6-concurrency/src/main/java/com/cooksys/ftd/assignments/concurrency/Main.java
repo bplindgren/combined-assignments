@@ -1,12 +1,16 @@
 package com.cooksys.ftd.assignments.concurrency;
 
 import java.io.IOException;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 import javax.xml.bind.JAXBException;
 
 import com.cooksys.ftd.assignments.concurrency.model.config.Config;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Main {
 
@@ -21,8 +25,17 @@ public class Main {
      * is not disabled, create a {@link Client} object with the client config and spin off a thread to run it.
      * @throws JAXBException 
      * @throws IOException 
-     */
+     */	
+	
+	private static Logger logger = LoggerFactory.getLogger(Main.class);
+	
     public static void main(String[] args) throws JAXBException, IOException {
+//    	logger.trace("Hello World"); // least serious
+//    	logger.debug("Hello World");
+//    	logger.info("Hello World");
+//    	logger.warn("Hello World");
+//    	logger.error("Hello World"); // most serious
+    	
     	// Unmarshall the config xml
     	Path path = Paths.get(".\\config\\config.xml");
     	Config config = Config.load(path);

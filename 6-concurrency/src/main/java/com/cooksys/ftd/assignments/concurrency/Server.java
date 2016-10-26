@@ -20,18 +20,19 @@ public class Server implements Runnable {
 			// Create a new ServerSocket
 			ServerSocket ss = new ServerSocket(config.getPort());
 			System.out.println("server is listening");
-			// Create a socket that allows it to receive attempted connections from the client
-	    	Socket s = ss.accept();
+			
+			while (true) {
+				// Create a socket that allows it to receive attempted connections from the client
+		    	Socket s = ss.accept();
 	    	
-	    	// Create a client handler for the server to use
-	    	ClientHandler ch = new ClientHandler();
-	    	Thread chThread = new Thread(new ClientHandler());
-	    	chThread.start();
-
+				// Create new ClientHandler Threads if an attempted connection is made
+		    	ClientHandler ch = new ClientHandler(s);
+		    	Thread chThread = new Thread(ch);
+		    	chThread.start();
+	    	}
+	    	
 		} catch (IOException e) {
 			e.printStackTrace();
-		} // finally {
-			// s.close();
-			// ss.close();
+		} 
     }
 }
